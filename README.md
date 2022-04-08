@@ -9,7 +9,7 @@ Official Repository for CVPR 2022 paper [*I M Avatar: Implicit Morphable Head Av
 If you find our code or paper useful, please cite as
 ```
 @inproceedings{zheng2022imavatar,
-  title={I M Avatar: Implicit Morphable Head Avatars from Videos},
+  title={{I} {M} {Avatar}: Implicit Morphable Head Avatars from Videos},
   author={Zheng, Yufeng and Abrevaya, Victoria Fernández and Bühler, Marcel C. and Chen, Xu and Black, Michael J. and Hilliges, Otmar},
   booktitle = {Computer Vision and Pattern Recognition (CVPR)},
   year = {2022}
