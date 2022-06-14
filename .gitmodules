@@ -1,0 +1,9 @@
+[submodule "preprocess/submodules/DECA"]
+	path = preprocess/submodules/DECA
+	url = https://github.com/YadiraF/DECA
+[submodule "preprocess/submodules/MODNet"]
+	path = preprocess/submodules/MODNet
+	url = https://github.com/ZHKKKe/MODNet
+[submodule "preprocess/submodules/face-parsing.PyTorch"]
+	path = preprocess/submodules/face-parsing.PyTorch
+	url = https://github.com/zllrunning/face-parsing.PyTorch
