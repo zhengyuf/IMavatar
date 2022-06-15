@@ -2,7 +2,7 @@
 ## [Paper](https://arxiv.org/abs/2112.07471) | [Video Youtube](https://youtu.be/915baJNX-IU) | [Video Download](https://dataset.ait.ethz.ch/downloads/imaOsdfvRe/output.mp4) | [Project Page](https://ait.ethz.ch/projects/2022/IMavatar/)
 
 
-<img src="assets/imavatar_real.gif" width="500" height="250"/> <img src="assets/makehuman.gif" width="500" height="250"/> 
+<img src="assets/imavatar_real.gif" width="400" height="200"/> <img src="assets/makehuman.gif" width="400" height="200"/> 
 
 Official Repository for CVPR 2022 paper [*I M Avatar: Implicit Morphable Head Avatars from Videos*](https://arxiv.org/abs/2112.07471). 
 
