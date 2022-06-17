@@ -11,6 +11,7 @@ Official Repository for CVPR 2022 paper [*I M Avatar: Implicit Morphable Head Av
 * Create a conda environment `conda env create -f environment.yml` and activate `conda activate IMavatar` 
 * We use `libmise` to extract 3D meshes, build `libmise` by running `cd code; python setup.py install`
 * Download [FLAME model](https://flame.is.tue.mpg.de/download.php), choose **FLAME 2020** and unzip it, copy 'generic_model.pkl' into `./code/flame/FLAME2020`
+* When choosing your GPU, avoid RTX30xx since it seems unstable with broyden's method, see [here](https://github.com/xuchen-ethz/snarf/issues/3#issue-1096847424) if you want to know more.
 ## Preparing dataset
 Download a preprocessed dataset from [Google drive](https://drive.google.com/file/d/1fr98tX81nerJea1sW5EjJnh5OvHwM0ui/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/yufeng.zip). You can run `download_data.bash`.
 

@@ -61,7 +61,7 @@ class Loss(nn.Module):
             return torch.tensor(0.0).cuda().float()
         sdf_pred = -self.alpha * sdf_output[mask]
         gt = object_mask[mask].float()
-        mask_loss = (1 / self.alpha) * F.binary_cross_entropy_with_logits(sdf_pred.squeeze(), gt, reduction='sum') / float(object_mask.shape[0])
+        mask_loss = (1 / self.alpha) * F.binary_cross_entropy_with_logits(sdf_pred.squeeze(-1), gt, reduction='sum') / float(object_mask.shape[0])
         return mask_loss
 
     def get_expression_reg_weight(self, pred, gt):
