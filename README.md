@@ -29,7 +29,7 @@ Set the *is_eval* flag for evaluation, optionally set *checkpoint* (if not, the 
 python scripts/exp_runner.py --conf ./confs/IMavatar_supervised.conf --is_eval [--checkpoint 60] [--load_path ...]
 ```
 ## Pre-trained model
-The pre-trained model for the example subject can be found at [Google drive]() or [ETH Zurich server]() ## TODO
+The pre-trained model for the example subject is coming soon.
 ## Additional features
 The following features are not used in the main paper, but helpful for training.
 * **Semantic-guided Training**:
