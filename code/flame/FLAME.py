@@ -62,7 +62,7 @@ class FLAME(nn.Module):
         shapedirs = to_tensor(to_np(flame_model.shapedirs), dtype=self.dtype)
         shapedirs = torch.cat([shapedirs[:,:,:n_shape], shapedirs[:,:,300:300+50]], 2)
         self.register_buffer('shapedirs', shapedirs * factor)
-        self.v_template = self.v_template + torch.einsum('bl,mkl->bmk', [shape_params.cpu(), shapedirs[:, :, :n_shape]]).squeeze(0)
+        self.v_template = self.v_template + torch.einsum('bl,mkl->bmk', [shape_params.cpu(), self.shapedirs[:, :, :n_shape]]).squeeze(0)
 
         self.canonical_pose = torch.zeros(1, 15).float().cuda()
         self.canonical_pose[:, 6] = 0.2
