@@ -2,5 +2,8 @@ mkdir ./data
 mkdir ./data/datasets
 mkdir ./data/experiments
 cd ./data/datasets/
-wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/yufeng.zip
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/yufeng.zip
+unzip yufeng.zip
+cd ./data/experiments/
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/yufeng.zip
 unzip yufeng.zip

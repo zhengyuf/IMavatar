@@ -13,7 +13,7 @@ Official Repository for CVPR 2022 paper [*I M Avatar: Implicit Morphable Head Av
 * Download [FLAME model](https://flame.is.tue.mpg.de/download.php), choose **FLAME 2020** and unzip it, copy 'generic_model.pkl' into `./code/flame/FLAME2020`
 * When choosing your GPU, avoid RTX30xx since it seems unstable with broyden's method, see [here](https://github.com/xuchen-ethz/snarf/issues/3#issue-1096847424) if you want to know more.
 ## Preparing dataset
-Download a preprocessed dataset from [Google drive](https://drive.google.com/file/d/1fr98tX81nerJea1sW5EjJnh5OvHwM0ui/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/yufeng.zip). You can run `download_data.bash`.
+Download a preprocessed dataset from [Google drive](https://drive.google.com/file/d/1Hzv41ZkpMK1X9h9Z-B54S-Nn1GcMveb8/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/yufeng.zip). You can run `download_data.bash`.
 
 Or prepare your own dataset following intructions in `./preprocess/README.md`.
 
@@ -29,7 +29,8 @@ Set the *is_eval* flag for evaluation, optionally set *checkpoint* (if not, the 
 python scripts/exp_runner.py --conf ./confs/IMavatar_supervised.conf --is_eval [--checkpoint 60] [--load_path ...]
 ```
 ## Pre-trained model
-The pre-trained model for the example subject is coming soon.
+Download a pretrained model from [Google drive](https://drive.google.com/file/d/1ZaznButY_zszllbBUoF89D3gBSMn-Tcc/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/yufeng.zip). See `download_data.bash`.
+
 ## Additional features
 The following features are not used in the main paper, but helpful for training.
 * **Semantic-guided Training**:
