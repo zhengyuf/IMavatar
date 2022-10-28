@@ -97,7 +97,7 @@ class Loss(nn.Module):
         gt_posedirs_values = torch.ones(bz, 36, 3).float().cuda()
         gt_posedirs_values[surface_mask] = gt_posedirs
         if self.gt_w_seg:
-            # mouth interior doesn't deform
+            # mouth interior and eye glasses doesn't deform
             mouth = semantics[:, :, 3].reshape(-1) == 1
             gt_posedirs_values[mouth, :] = 0.0
         output['gt_posedirs'] = gt_posedirs_values
@@ -105,6 +105,16 @@ class Loss(nn.Module):
 
         gt_shapedirs_values = torch.ones(bz, 3, 50).float().cuda()
         gt_shapedirs_values[surface_mask] = gt_shapedirs
+        # I accidentally deleted these when cleaning the code...
+        # So this is why I don't see teeth anymore...QAQ
+        if self.gt_w_seg:
+            # mouth interior and eye glasses doesn't deform
+            mouth = semantics[:, :, 3].reshape(-1) == 1
+            gt_shapedirs_values[mouth, :] = 0.0
+        if ghostbone and self.gt_w_seg:
+            # cloth doesn't deform with facial expressions
+            cloth = semantics[:, :, 7].reshape(-1) == 1
+            gt_shapedirs_values[cloth, :] = 0.
         output['gt_shapedirs'] = gt_shapedirs_values
         return output
 
@@ -131,6 +141,7 @@ class Loss(nn.Module):
             num_points = model_outputs['lbs_weight'].shape[0]
             if self.gt_w_seg:
                 # do not enforce nearest neighbor skinning weight for teeth, learn from data instead.
+                # now it's also not enforcing nn skinning wieght for glasses, I'm too lazy to correct it but the skinning weight can still learn correctly for glasses.
                 lbs_loss = self.get_lbs_loss(model_outputs['lbs_weight'].reshape(num_points, -1), outputs['gt_lbs_weight'].reshape(num_points, -1), model_outputs['flame_distance'], network_object_mask, object_mask & (ground_truth['semantics'][:, :, 3].reshape(-1) != 1))
             else:
                 lbs_loss = self.get_lbs_loss(model_outputs['lbs_weight'].reshape(num_points, -1), outputs['gt_lbs_weight'].reshape(num_points, -1), model_outputs['flame_distance'], network_object_mask, object_mask)

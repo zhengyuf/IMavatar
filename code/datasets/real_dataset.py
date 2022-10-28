@@ -49,7 +49,7 @@ class FaceDataset(torch.utils.data.Dataset):
         use_semantics: whether to use semantic maps as scripts input
         only_json: used for testing, when there is no GT images, masks or semantics
         """
-
+        sub_dir = [str(dir) for dir in sub_dir]
         self.total_pixels = img_res[0] * img_res[1]
         self.img_res = img_res
         self.sample_size = sample_size

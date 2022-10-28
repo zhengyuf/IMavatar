@@ -40,10 +40,10 @@ def load_semantic(path, img_res):
     img = imageio.imread(path, as_gray=True)
     h, w = img.shape
     semantics = np.zeros((h, w, 9))
-    semantics[:, :, 0] = ((img == 1) + (img == 10) + (img == 8) + (img == 7) + (img == 14) + (img == 6)) >= 1 # skin, nose, ears, neck
+    semantics[:, :, 0] = ((img == 1) + (img == 10) + (img == 8) + (img == 7) + (img == 14)) >= 1 # skin, nose, ears, neck
     semantics[:, :, 1] = ((img == 4) + (img == 5)) >= 1 # left eye, right eye
     semantics[:, :, 2] = ((img == 2) + (img == 3)) >= 1 # left eyebrow, right eyebrow
-    semantics[:, :, 3] = (img == 11) # mouth interior
+    semantics[:, :, 3] = ((img == 11) + (img == 6)) >= 1 # mouth interior, eye glasses
     semantics[:, :, 4] = (img == 12) # upper lip
     semantics[:, :, 5] = (img == 13) # lower lip
     semantics[:, :, 6] = ((img == 17) + (img == 9)) >= 1 # hair

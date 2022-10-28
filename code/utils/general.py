@@ -64,7 +64,7 @@ def get_split_name(splits):
     # example output: MVI_1812+MVI_1813
     name = ''
     for s in splits:
-        name += s
+        name += str(s)
         name += '+'
     assert len(name) > 1
     return name[:-1]

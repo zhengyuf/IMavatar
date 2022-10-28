@@ -204,8 +204,9 @@ class TrainRunner():
         for acc in self.GT_lbs_milestones:
             if self.start_epoch > acc:
                 self.loss.lbs_weight = self.loss.lbs_weight * self.GT_lbs_factor
-        if len(self.GT_lbs_milestones) > 0 and self.start_epoch >= self.GT_lbs_milestones[-1]:
-            self.loss.lbs_weight = 0.
+                self.loss.flame_distance_weight = self.loss.flame_distance_weight * self.GT_lbs_factor
+        #if len(self.GT_lbs_milestones) > 0 and self.start_epoch >= self.GT_lbs_milestones[-1]:
+        #    self.loss.lbs_weight = 0.
 
     def save_checkpoints(self, epoch, only_latest=False):
         if not only_latest:
@@ -262,8 +263,10 @@ class TrainRunner():
 
             if epoch in self.GT_lbs_milestones:
                 self.loss.lbs_weight = self.loss.lbs_weight * self.GT_lbs_factor
-            if len(self.GT_lbs_milestones) > 0 and epoch >= self.GT_lbs_milestones[-1]:
-                self.loss.lbs_weight = 0.
+                self.loss.flame_distance_weight = self.loss.flame_distance_weight * self.GT_lbs_factor
+
+            #if len(self.GT_lbs_milestones) > 0 and epoch >= self.GT_lbs_milestones[-1]:
+            #    self.loss.lbs_weight = 0.
 
             if epoch % 5 == 0:
                 self.save_checkpoints(epoch)

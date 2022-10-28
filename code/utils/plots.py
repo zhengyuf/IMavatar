@@ -36,7 +36,7 @@ def plot(img_index, sdf_function, model_outputs, pose, ground_truth, path, epoch
     plot_images(model_outputs, depth, ground_truth, path, epoch, img_index, 1, img_res, batch_size, num_samples, is_eval)
     del depth, points, network_object_mask
     # Generate mesh.
-    if is_eval:
+    if is_eval and False:
         with torch.no_grad():
             import time
             start_time = time.time()

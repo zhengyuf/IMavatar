@@ -1,4 +1,4 @@
-name: IMavatar
+name: IMavatar_orig
 channels:
   - pytorch3d
   - pytorch

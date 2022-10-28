@@ -106,7 +106,7 @@ class TestRunner():
             if self.optimize_latent_code:
                 # use the latent code from the first scripts frame
                 model_input['latent_code'] = self.latent_codes(torch.LongTensor([0]).cuda()).squeeze(1).detach()
-            split = utils.split_input(model_input, self.total_pixels, n_pixels=min(33000, self.img_res[0] * self.img_res[1]))
+            split = utils.split_input(model_input, self.total_pixels, n_pixels=min(52500, self.img_res[0] * self.img_res[1]))
 
             res = []
             for s in split:
