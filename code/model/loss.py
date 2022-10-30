@@ -105,16 +105,20 @@ class Loss(nn.Module):
 
         gt_shapedirs_values = torch.ones(bz, 3, 50).float().cuda()
         gt_shapedirs_values[surface_mask] = gt_shapedirs
-        # I accidentally deleted these when cleaning the code...
-        # So this is why I don't see teeth anymore...QAQ
-        if self.gt_w_seg:
-            # mouth interior and eye glasses doesn't deform
-            mouth = semantics[:, :, 3].reshape(-1) == 1
-            gt_shapedirs_values[mouth, :] = 0.0
-        if ghostbone and self.gt_w_seg:
-            # cloth doesn't deform with facial expressions
-            cloth = semantics[:, :, 7].reshape(-1) == 1
-            gt_shapedirs_values[cloth, :] = 0.
+
+        disable_shapedirs_for_mouth_and_cloth = False
+        if disable_shapedirs_for_mouth_and_cloth:
+            # I accidentally deleted these when cleaning the code...
+            # So this is why I don't see teeth anymore...QAQ
+            # Most of suppmat experiments used this code block, but it doesn't necessarily help in all cases.
+            if self.gt_w_seg:
+                # mouth interior and eye glasses doesn't deform
+                mouth = semantics[:, :, 3].reshape(-1) == 1
+                gt_shapedirs_values[mouth, :] = 0.0
+            if ghostbone and self.gt_w_seg:
+                # cloth doesn't deform with facial expressions
+                cloth = semantics[:, :, 7].reshape(-1) == 1
+                gt_shapedirs_values[cloth, :] = 0.
         output['gt_shapedirs'] = gt_shapedirs_values
         return output
 
