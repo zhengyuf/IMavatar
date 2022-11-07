@@ -5,7 +5,7 @@
 <img src="assets/imavatar_real.gif" width="400" height="200"/> <img src="assets/makehuman.gif" width="400" height="200"/> 
 
 Official Repository for CVPR 2022 paper [*I M Avatar: Implicit Morphable Head Avatars from Videos*](https://arxiv.org/abs/2112.07471). 
-
+* *Update Nov 7: We released an additional subject for research purpose. Please find the data in [this Google Drive folder](https://drive.google.com/drive/folders/1QxT0bJSrvmvfV5OZBxNlLVEIZP0X56Z-?usp=share_link).*
 ## Getting Started
 * Clone this repo: `git clone --recursive git@github.com:zhengyuf/IMavatar.git`
 * Create a conda environment `conda env create -f environment.yml` and activate `conda activate IMavatar` 
