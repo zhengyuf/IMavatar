@@ -21,7 +21,7 @@ Link the dataset folder to `./data/datasets`. Link the experiment output folder 
 
 ## Training
 ```
-python scripts/exp_runner.py ---conf ./confs/IMavatar_supervised.conf [--wandb_workspace IMavatar] [--is_continue]
+python scripts/exp_runner.py --conf ./confs/IMavatar_supervised.conf [--wandb_workspace IMavatar] [--is_continue]
 ```
 ## Evaluation
 Set the *is_eval* flag for evaluation, optionally set *checkpoint* (if not, the latest checkpoint will be used) and *load_path* 
