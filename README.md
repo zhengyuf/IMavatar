@@ -4,7 +4,7 @@
 
 <img src="assets/imavatar_real.gif" width="400" height="200"/> <img src="assets/makehuman.gif" width="400" height="200"/> 
 
-Official Repository for CVPR 2022 paper [*I M Avatar: Implicit Morphable Head Avatars from Videos*](https://arxiv.org/abs/2112.07471). 
+Official Repository for CVPR 2022 oral paper [*I M Avatar: Implicit Morphable Head Avatars from Videos*](https://arxiv.org/abs/2112.07471). 
 * *Update Nov 7: We released an additional subject for research purpose. Please find the data in [this Google Drive folder](https://drive.google.com/drive/folders/1QxT0bJSrvmvfV5OZBxNlLVEIZP0X56Z-?usp=share_link) or on [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/marcel.zip).*
 ## Getting Started
 * Clone this repo: `git clone --recursive git@github.com:zhengyuf/IMavatar.git`
@@ -44,6 +44,14 @@ When the FLAME parameters are noisy, I find it helpful to set `optimize_camera` 
 * Our preprocessing script scales FLAME head meshes by 4 so that it would fit the unit sphere tighter. Remember to adjust camera positions accordingly if you are using your own preprocessing pipeline. 
 * Multi-GPU training is not tested. We found a single GPU to be sufficient in terms of batch size.
 
+## You might find interesting
+* [Chen et. al. - Fast-SNARF: A Fast Deformer for Articulated Neural Fields](https://github.com/xuchen-ethz/fast-snarf)
+
+* [Zheng et. al. - PointAvatar: Deformable Point-based Head Avatars from Videos](https://github.com/zhengyuf/pointavatar)
+
+## Acknowledgement
+Yufeng Zheng and Xu Chen were supported by the Max Planck ETH Center for Learning Systems. This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation program grant agreement No 717054. This work was partly supported by the German Federal Ministry of Education and Research (BMBF): Tuebingen AI Center, FKZ: 01IS18039A. MJB has received research gift funds from Adobe, Intel, Nvidia, Meta/Facebook, and Amazon.  MJB has financial interests in Amazon, Datagen Technologies, and Meshcapade GmbH.  While MJB is a consultant for Meshcapade, his research in this project was performed solely at, and funded solely by, the Max Planck Society.
+
 ## Citation
 If you find our code or paper useful, please cite as:
 ```
@@ -54,10 +62,3 @@ If you find our code or paper useful, please cite as:
   year = {2022}
 }
 ```
-## You might find interesting
-* [Chen et. al. - Fast-SNARF: A Fast Deformer for Articulated Neural Fields](https://github.com/xuchen-ethz/fast-snarf)
-
-* [Zheng et. al. - PointAvatar: Deformable Point-based Head Avatars from Videos](https://github.com/zhengyuf/pointavatar)
-
-## Acknowledgement
-Yufeng Zheng and Xu Chen were supported by the Max Planck ETH Center for Learning Systems. This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation program grant agreement No 717054. This work was partly supported by the German Federal Ministry of Education and Research (BMBF): Tuebingen AI Center, FKZ: 01IS18039A. MJB has received research gift funds from Adobe, Intel, Nvidia, Meta/Facebook, and Amazon.  MJB has financial interests in Amazon, Datagen Technologies, and Meshcapade GmbH.  While MJB is a consultant for Meshcapade, his research in this project was performed solely at, and funded solely by, the Max Planck Society.
