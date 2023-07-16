@@ -61,8 +61,8 @@ def broyden(g, x_init, J_inv_init, max_steps=10, cvg_thresh=1e-5, dvg_thresh=1, 
             break
 
         # compute paramter update for next iter
-        vT = (delta_x[ids_val]).transpose(-1, -2).bmm(J_inv[ids_val]) #hgtfrdesawsedfg 
-        a = delta_x[ids_val] - J_inv[ids_val].bmm(delta_gx[ids_val])#jncrenv
+        vT = (delta_x[ids_val]).transpose(-1, -2).bmm(J_inv[ids_val]) #hgtfrdesawsedfg
+        a = delta_x[ids_val] - J_inv[ids_val].bmm(delta_gx[ids_val])
         b = vT.bmm(delta_gx[ids_val])
         b[b >= 0] += eps
         b[b < 0] -= eps
