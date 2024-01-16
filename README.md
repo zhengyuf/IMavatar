@@ -5,7 +5,7 @@
 <img src="assets/imavatar_real.gif" width="400" height="200"/> <img src="assets/makehuman.gif" width="400" height="200"/> 
 
 Official Repository for CVPR 2022 oral paper [*I M Avatar: Implicit Morphable Head Avatars from Videos*](https://arxiv.org/abs/2112.07471). 
-* *Update Nov 7: We released an additional subject for research purpose. Please find the data in [this Google Drive folder](https://drive.google.com/drive/folders/1QxT0bJSrvmvfV5OZBxNlLVEIZP0X56Z-?usp=share_link) or on [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/marcel.zip).*
+* *Update Nov 7: We released an additional subject for research purpose. Please find the data in [this Google Drive folder](https://drive.google.com/drive/folders/1QxT0bJSrvmvfV5OZBxNlLVEIZP0X56Z-?usp=share_link) or on [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject2.zip).*
 ## Getting Started
 * Clone this repo: `git clone --recursive git@github.com:zhengyuf/IMavatar.git`
 * Create a conda environment `conda env create -f environment.yml` and activate `conda activate IMavatar` 
@@ -13,7 +13,7 @@ Official Repository for CVPR 2022 oral paper [*I M Avatar: Implicit Morphable He
 * Download [FLAME model](https://flame.is.tue.mpg.de/download.php), choose **FLAME 2020** and unzip it, copy 'generic_model.pkl' into `./code/flame/FLAME2020`
 * When choosing your GPU, avoid RTX30xx since it seems unstable with broyden's method, see [here](https://github.com/xuchen-ethz/snarf/issues/3#issue-1096847424) if you want to know more. The results in the paper are obtained from a GeForce RTX2080Ti GPU. Quadro RTX6000 is also tested to converge well.
 ## Preparing dataset
-Download a preprocessed dataset from [Google drive](https://drive.google.com/file/d/1Hzv41ZkpMK1X9h9Z-B54S-Nn1GcMveb8/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/yufeng.zip). You can run `download_data.bash`.
+Download a preprocessed dataset from [Google drive](https://drive.google.com/file/d/1Hzv41ZkpMK1X9h9Z-B54S-Nn1GcMveb8/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject1.zip). You can run `download_data.bash`.
 
 Or prepare your own dataset following intructions in `./preprocess/README.md`.
 
@@ -29,7 +29,7 @@ Set the *is_eval* flag for evaluation, optionally set *checkpoint* (if not, the 
 python scripts/exp_runner.py --conf ./confs/IMavatar_supervised.conf --is_eval [--checkpoint 60] [--load_path ...]
 ```
 ## Pre-trained model
-Download a pretrained model from [Google drive](https://drive.google.com/file/d/1ZaznButY_zszllbBUoF89D3gBSMn-Tcc/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/yufeng.zip). See `download_data.bash`.
+Download a pretrained model from [Google drive](https://drive.google.com/file/d/1ZaznButY_zszllbBUoF89D3gBSMn-Tcc/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/subject1.zip). See `download_data.bash`.
 
 ## Additional features
 The following features are not used in the main paper, but helpful for training.
