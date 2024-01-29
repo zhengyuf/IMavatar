@@ -2,15 +2,15 @@ mkdir ./data
 mkdir ./data/datasets
 mkdir ./data/experiments
 cd ./data/datasets/
-wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/yufeng.zip
-unzip yufeng.zip
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject1.zip
+unzip subject1.zip
 cd ../experiments/
-wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/yufeng.zip
-unzip yufeng.zip
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/subject1.zip
+unzip subject1.zip
 ## download the other subject with the following commands
 # cd ../datasets/
-# wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/marcel.zip
-# unzip marcel.zip
+# wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject2.zip
+# unzip subject2.zip
 # cd ../experiments/
-# wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/IMavatar_marcel.zip
-# unzip IMavatar_marcel.zip
+# wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/subject2.zip
+# unzip subject2.zip
