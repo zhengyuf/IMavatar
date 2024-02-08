@@ -18,7 +18,7 @@ class RenderingNetwork(nn.Module):
     ):
         super().__init__()
 
-        dims = [d_in + bottleneck + feature_vector_size] + dims + [d_out]
+        dims = [d_in + bottleneck + feature_vector_size] + dims + [b_out]
 
         self.embedview_fn = None
         self.embedpnts_fn = None
