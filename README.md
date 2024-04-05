@@ -13,7 +13,7 @@ Official Repository for CVPR 2022 oral paper [*I M Avatar: Implicit Morphable He
 * Download [FLAME model](https://flame.is.tue.mpg.de/download.php), choose **FLAME 2020** and unzip it, copy 'generic_model.pkl' into `./code/flame/FLAME2020`
 * When choosing your GPU, avoid RTX30xx since it seems unstable with broyden's method, see [here](https://github.com/xuchen-ethz/snarf/issues/3#issue-1096847424) if you want to know more. The results in the paper are obtained from a GeForce RTX2080Ti GPU. Quadro RTX6000 is also tested to converge well.
 ## Preparing dataset
-Download a preprocessed dataset from [Google drive](https://drive.google.com/file/d/1Hzv41ZkpMK1X9h9Z-B54S-Nn1GcMveb8/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject1.zip). You can run `download_data.bash`.
+Download a preprocessed dataset from [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject1.zip). You can run `download_data.bash`.
 
 Or prepare your own dataset following intructions in `./preprocess/README.md`.
 
