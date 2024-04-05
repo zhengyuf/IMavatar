@@ -29,7 +29,7 @@ Set the *is_eval* flag for evaluation, optionally set *checkpoint* (if not, the 
 python scripts/exp_runner.py --conf ./confs/IMavatar_supervised.conf --is_eval [--checkpoint 60] [--load_path ...]
 ```
 ## Pre-trained model
-Download a pretrained model from [Google drive](https://drive.google.com/file/d/1ZaznButY_zszllbBUoF89D3gBSMn-Tcc/view?usp=sharing) or [ETH Zurich server](https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/subject1.zip). See `download_data.bash`.
+Download a pretrained model from the ETH Zurich server ([subject1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/subject1.zip), [subject2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/checkpoint/subject2.zip)). See `download_data.bash`.
 
 ## Additional features
 The following features are not used in the main paper, but helpful for training.
