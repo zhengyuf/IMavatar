@@ -37,7 +37,7 @@ def load_rgb_mask_human(path, img_res):
     return img, mask
 
 def load_semantic(path, img_res):
-    img = imageio.imread(path, as_gray=True)
+    img = imageio.imread(path, mode='F')
     h, w = img.shape
     semantics = np.zeros((h, w, 9))
     semantics[:, :, 0] = ((img == 1) + (img == 10) + (img == 8) + (img == 7) + (img == 14)) >= 1 # skin, nose, ears, neck
@@ -79,7 +79,7 @@ def visualize_semantics(semantics):
     return color
 
 def load_mask(path, img_res):
-    alpha = imageio.imread(path, as_gray=True)
+    alpha = imageio.imread(path, mode='F')
     alpha = skimage.img_as_float32(alpha)
 
     alpha = cv2.resize(alpha, (int(img_res[0]), int(img_res[1])))
