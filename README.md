@@ -1,5 +1,5 @@
 # I M Avatar: Implicit Morphable Head Avatars from Videos
-## [Paper](https://arxiv.org/abs/2112.07471) | [Video Youtube](https://youtu.be/915baJNX-IU) | [Video Download](https://dataset.ait.ethz.ch/downloads/imaOsdfvRe/output.mp4) | [Project Page](https://ait.ethz.ch/projects/2022/IMavatar/)
+## [Paper](https://arxiv.org/abs/2112.07471) | [Video Youtube](https://youtu.be/915baJNX-IU) | [Video Download](https://dataset.ait.ethz.ch/downloads/imaOsdfvRe/output.mp4) | [Project Page](https://ait.ethz.ch/imavatar)
 
 
 <img src="assets/imavatar_real.gif" width="400" height="200"/> <img src="assets/makehuman.gif" width="400" height="200"/> 
